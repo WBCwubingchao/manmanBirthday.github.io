@@ -4,14 +4,20 @@ var centerName=".pic0";
 var rightName=".pic1";
 
 $(document).ready(function(){
-
+	initIndex();
 	// 定时器调用函数，循环进行！！
-	setInterval(setCurrentPosition, 8000);
+	setInterval(setCurrentPosition, 2900);
 	// setCurrentPosition();
 
 });
 
-
+function initIndex(){
+	var screenWidth=window.screen.width-5;
+	var screenHeight= window.screen.height-150;
+	// alert(screenHeight);
+	$(".swiper_picture").width(screenWidth);
+	$(".swiper_picture").height(screenHeight);
+}
 function setCurrentPosition(){
 	$(centerName).removeAttr('id','center_picture');
 	$(rightName).removeAttr('id','right_picture');

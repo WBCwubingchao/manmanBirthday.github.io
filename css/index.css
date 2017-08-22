@@ -1,17 +1,19 @@
 .swiper_picture{
+	position: relative;
 	width: 100%;
 	height: 100%;
+	overflow:hidden;
+	/* border: 10px solid #000; */
 }
 
 .swiper_picture img{
 	width: 100%;
 	height:100%;
-	left: 0px;
-}
+} 
 
 .swiper_picture div{
-	width: 150%;
-	height: 130%;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	display: none;
 	/* border: 10px solid #DDD; */
@@ -23,7 +25,8 @@
 	left: 0px;
 	top:0px;
 	display:inline-block;
-	animation:moveleft 8s;
+	animation:moveleft 1s;
+	animation-delay:2s
 }
 
 @keyframes moveleft
@@ -50,7 +53,8 @@ to {left:-100%;}
 	left: 100%;
 	top: 0px;
 	display: inline-block;
-	animation:moveleft2 8s;
+	animation:moveleft2 1s;
+	animation-delay:2s
 }
 
 @keyframes moveleft2
@@ -63,4 +67,46 @@ to {left:0px;}
 {
 from {left:100%;}
 to {left:0%;}
+}
+
+/* 文字相关css */
+
+.word_show{
+	background-color: #000;
+	opacity: 0.5;
+	position: absolute;
+	border-radius: 15px;
+	top:200px;
+	left:550px;
+	width: 400px;
+	height: 310px;
+}
+
+.vertical_word{ 
+	color: white;
+	writing-mode:tb-rl;
+	font-family:KaiTi;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 100px;
+}
+.lines{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 2px solid #fff;
+}
+.hor_word{
+	
+	color: red;
+	font-family:KaiTi;
+	font-size: 20px;
+	text-align: center;
+}
+
+
+.birthday{
+	color: white;
+	font-family:KaiTi;
+	font-size: 20px;
+	text-align: center;
 }
